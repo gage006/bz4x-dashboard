@@ -1,0 +1,17 @@
+{
+  "script_id": "start_bz4x",
+  "config": {
+    "alias": "Start bz4X",
+    "description": "",
+    "icon": "mdi:car",
+    "sequence": [
+      {
+        "action": "toyota_na.engine_start",
+        "metadata": {},
+        "data": {
+          "vehicle": "changeme"
+        }
+      }
+    ]
+  }
+}

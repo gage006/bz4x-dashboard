@@ -1,0 +1,24 @@
+rest:
+  # Chargepoint public station status
+  # 1. go to https://driver.chargepoint.com/
+  # 2. locate the charger you want and click on it
+  #    the URL will update to something like https://driver.chargepoint.com/stations/119681
+  # 3. grab that number and put it in the URL below
+  # 4. update this as necessary
+  #    if there are 2 ports, add 2 sensors - one for each side     
+  - resource: "https://mc.chargepoint.com/map-prod/v3/station/info?deviceId=119681"
+    sensor:
+      - name: "ChargePoint East 2"
+        value_template: "{{ value_json['portsInfo']['ports'][0]['status'] }}"
+  - resource: "https://mc.chargepoint.com/map-prod/v3/station/info?deviceId=118421"
+    sensor:
+      - name: "ChargePoint West 1"
+        value_template: "{{ value_json['portsInfo']['ports'][0]['status'] }}"
+  - resource: "https://mc.chargepoint.com/map-prod/v3/station/info?deviceId=119659"
+    sensor:
+      - name: "ChargePoint West 2"
+        value_template: "{{ value_json['portsInfo']['ports'][0]['status'] }}"
+  - resource: "https://mc.chargepoint.com/map-prod/v3/station/info?deviceId=119519"
+    sensor:
+      - name: "ChargePoint North 2"
+        value_template: "{{ value_json['portsInfo']['ports'][0]['status'] }}"

@@ -1,0 +1,69 @@
+{
+  "url_path": "toyota-bz4x",
+  "title": "Toyota bZ4X",
+  "config": {
+    "views": [
+      {
+        "title": "Toyota bZ4X",
+        "type": "sections",
+        "sections": [
+          {
+            "cards": [
+              {
+                "type": "picture",
+                "image": {
+                  "media_content_type": "image/png",
+                  "media_content_id": "media-source://media_source/local/bz4x.png",
+                  "metadata": {
+                    "navigateIds": [
+                      {},
+                      {
+                        "media_content_type": "app",
+                        "media_content_id": "media-source://media_source"
+                      }
+                    ],
+                    "children_media_class": null,
+                    "thumbnail": null,
+                    "title": "bz4x.png",
+                    "media_class": "image"
+                  }
+                },
+                "tap_action": {
+                  "action": "more-info",
+                  "entity": "lock.2024_bz4x_awd_xle"
+                }
+              },
+              {
+                "styles": ".bubble-range-fill { \n    background: black !important;\n    opacity: 1 !important;\n  }\n  .bubble-button-background {\n    background-color: grey !important;\n    opacity: 0.2 !important;\n  }",
+                "type": "custom:bubble-card",
+                "card_type": "button",
+                "read_only_slider": true,
+                "button_type": "slider",
+                "name": "Battery Status",
+                "entity": "sensor.ev_battery_level_2024_bz4x_awd_xle",
+                "icon": "mdi:battery-high",
+                "show_state": true,
+                "sub_button": [
+                  {
+                    "entity": "sensor.ev_range_ac_2024_bz4x_awd_xle",
+                    "show_state": true,
+                    "icon": "mdi:map-marker-distance",
+                    "show_background": false
+                  }
+                ]
+              },
+              {
+                "type": "custom:bubble-card",
+                "card_type": "button",
+                "entity": "script.start_bz4x",
+                "icon": "mdi:car-connected",
+                "name": "Remote Start",
+                "button_type": "switch"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
